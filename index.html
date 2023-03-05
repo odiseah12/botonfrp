@@ -1,45 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuración del celular</title>
-    <style>
-      /* Estilos para el botón */
-      button {
-        display: block;
-        margin: 2rem auto;
-        font-size: 1.5rem;
-        padding: 1rem;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background-color: #3E8E41;
-      }
-    </style>
-  </head>
-  <body>
-    <button type="button" onclick="openSettings()">Abrir configuració2n</button>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Bienvenido a mi página web</h1>
+    <p>Por favor, seleccione una opción:</p>
+    <button type="button" onclick="openApps()">Abrir lista de aplicaciones</button>
+    <button type="button" onclick="openDownloads()">Abrir carpeta de descargas</button>
+    <button type="button" onclick="openSettings()">Abrir configuración de Android</button>
+    
     <script>
+      function openApps() {
+        window.location.href = 'market://details?id=';
+      }
+
+      function openDownloads() {
+        window.location.href = 'content://downloads/';
+      }
+
       function openSettings() {
-        if (navigator.userAgent.match(/Android/i)) {
-          window.location.href = "intent://#Intent;action=android.settings.SETTINGS;category=android.intent.category.DEFAULT;category=android.intent.category.VOICE_LAUNCH;end;"
-;
-        } else {
-          alert('Lo siento, esta función solo está disponible en dispositivos Android.');
-        }
+        window.location.href = 'intent://#Intent;action=android.settings.SETTINGS;category=android.intent.category.DEFAULT;category=android.intent.category.VOICE_LAUNCH;end;';
       }
     </script>
-   
-    
-    
-    
-
-  </body>
+  
+</body>
 </html>
