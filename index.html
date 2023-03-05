@@ -24,17 +24,18 @@
     </style>
   </head>
   <body>
-    <button type="button" onclick="openSettings()">Abrir configuración</button>
+    <button type="submit" onclick="openSettings()">Abrir configuració2n</button>
 
     <script>
       function openSettings() {
         if (navigator.userAgent.match(/Android/i)) {
-          window.location.href = 'intent:#Intent;action=android.settings.SETTINGS;end';
+          window.location.href = 'intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.DEFAULT;package=com.android.settings;end';
         } else {
           alert('Lo siento, esta función solo está disponible en dispositivos Android.');
         }
       }
     </script>
+    
     
 
   </body>
