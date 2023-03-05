@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración del celular</title>
+    <style>
+      /* Estilos para el botón */
+      button {
+        display: block;
+        margin: 2rem auto;
+        font-size: 1.5rem;
+        padding: 1rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #3E8E41;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="window.location.href='intent:#Intent;action=android.settings.SETTINGS;end'">Abrir configuración</button>
+  </body>
+</html>
