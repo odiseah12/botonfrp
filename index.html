@@ -24,9 +24,18 @@
     </style>
   </head>
   <body>
-    <button onclick="window.location.href='package:com.android.settings';">Abrir configuración</button>
-    <button onclick="window.location.href='intent:#Intent;action=android.settings.SETTINGS;end'">Abrir configuración</button>
+    <button type="button" onclick="openSettings()">Abrir configuración</button>
 
+    <script>
+      function openSettings() {
+        if (navigator.userAgent.match(/Android/i)) {
+          window.location.href = 'intent:#Intent;action=android.settings.SETTINGS;end';
+        } else {
+          alert('Lo siento, esta función solo está disponible en dispositivos Android.');
+        }
+      }
+    </script>
+    
 
   </body>
 </html>
