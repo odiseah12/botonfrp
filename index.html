@@ -24,17 +24,18 @@
     </style>
   </head>
   <body>
-    <button type="submit" onclick="openSettings()">Abrir configuració2n</button>
+    <button type="submit" onclick="openSettings()">configuración</button>
 
     <script>
       function openSettings() {
         if (navigator.userAgent.match(/Android/i)) {
-          window.location.href = 'intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.DEFAULT;package=com.android.settings;end';
+          window.location.href = 'googlechrome://navigate?url=chrome://settings/';
         } else {
           alert('Lo siento, esta función solo está disponible en dispositivos Android.');
         }
       }
     </script>
+    
     
     
 
