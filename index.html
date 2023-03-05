@@ -24,28 +24,19 @@
     </style>
   </head>
   <body>
-    <button type="submit" onclick="openSettings()">google play</button>
+    <button type="submit" onclick="openSettings()">Abrir configuració2n</button>
 
     <script>
       function openSettings() {
         if (navigator.userAgent.match(/Android/i)) {
-          window.location.href = 'intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.DEFAULT;package=com.android.settings;end';
+          window.location.href = "intent://#Intent;action=android.settings.SETTINGS;category=android.intent.category.DEFAULT;category=android.intent.category.VOICE_LAUNCH;end;"
+;
         } else {
           alert('Lo siento, esta función solo está disponible en dispositivos Android.');
         }
       }
     </script>
-    <button type="submit" onclick="openSettings()">configuración</button>
-
-    <script>
-      function openSettings() {
-        if (navigator.userAgent.match(/Android/i)) {
-          window.location.href = 'intent:#Intent;action=com.android.settings.SETTINGS;end;';
-        } else {
-          alert('Lo siento, esta función solo está disponible en dispositivos Android.');
-        }
-      }
-    </script>
+   
     
     
     
